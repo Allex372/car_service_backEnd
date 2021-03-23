@@ -5,6 +5,6 @@ const deleteOldTokens = require('./deleteOldTokens');
 module.exports = () => {
     cron.schedule('*/1 * * * * *', () => {
         // calculateStatistic();
-        deleteOldTokens();
+        // deleteOldTokens();
     });
 };

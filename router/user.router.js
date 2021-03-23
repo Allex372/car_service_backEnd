@@ -1,6 +1,7 @@
 const router = require('express').Router();
+const { UserAccess, AdminAccess } = require('../constant/constants');
 const { userController } = require('../controller');
-const { userMiddleware, authMiddleware: { checkAccessTokenMiddleware } } = require('../middleware');
+const { userMiddleware, authMiddleware: { checkAccessTokenMiddleware }, checkRoleMiddleware } = require('../middleware');
 
 router.get('/', checkAccessTokenMiddleware, userController.getAllUsers);
 

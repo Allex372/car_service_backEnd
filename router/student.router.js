@@ -8,9 +8,7 @@ const { authMiddleware, checkRoleMiddleware } = require('../middleware');
 router.get('/', studentController.getAll);
 router.post('/',
     authMiddleware.checkAccessTokenMiddleware,
-    checkRoleMiddleware.checkAccess([
-        AdminAccess
-    ]),
+    checkRoleMiddleware.checkAccess([AdminAccess]),
     studentController.createStudent);
 
 module.exports = router;
