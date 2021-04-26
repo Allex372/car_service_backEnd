@@ -12,5 +12,9 @@ module.exports = {
     [emailActions.STATISTIC]: {
         templateName: 'statistic',
         subject: 'Stats'
+    },
+    [emailActions.NEW_USER]: {
+        templateName: 'new_user',
+        subject: 'information'
     }
 };
